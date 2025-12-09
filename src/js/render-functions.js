@@ -64,3 +64,13 @@ export function clearGallery() {
 	const gallery = document.querySelector(".gallery");
 	gallery.innerHTML = "";
 }
+
+export function showLoadMoreButton() {
+	const loadMoreButton = document.querySelector("#load-more");
+	loadMoreButton.style.display = "block";
+}
+
+export function hideLoadMoreButton() {
+	const loadMoreButton = document.querySelector("#load-more");
+	loadMoreButton.style.display = "none";
+}

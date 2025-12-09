@@ -1,5 +1,11 @@
 import axios from "axios";
 
-export default function getImagesByQuery(query) {
-	return axios.get(query);
+export default async function getImagesByQuery(query, page) {
+	const response = await axios.get(query, {
+		params: {
+			page
+		}
+	});
+
+	return response.data;
 }
