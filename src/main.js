@@ -16,6 +16,7 @@ form.addEventListener("submit", async e => {
 	e.preventDefault();
 
 	clearGallery();
+	hideLoadMoreButton();
 	page = 0;
 
 	if (!input.value.trim()) {
@@ -49,6 +50,7 @@ form.addEventListener("submit", async e => {
 loadMoreButton.addEventListener("click", async () => {
 	page++;
 
+	hideLoadMoreButton();
 	showLoader();
 
 	const data = await getImagesByQuery(axiosGetQuery, page);
