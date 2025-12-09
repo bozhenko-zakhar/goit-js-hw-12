@@ -55,7 +55,7 @@ loadMoreButton.addEventListener("click", async () => {
 	handleDataPromise(data);
 
 	const image = document.querySelector(".gallery-item");
-	
+
 	window.scrollBy({
 		top: image.getBoundingClientRect("top").height * 2,
 		behavior: "smooth",
@@ -78,7 +78,7 @@ function handleDataPromise(data) {
 
 		if (page >= totalPages) {
 			iziToast.info({
-				message: "Sorry, there are no images matching your search query. Please try again!",
+				message: "We're sorry, but you've reached the end of search results.",
 				position: "topRight"
 			});
 			hideLoadMoreButton();
