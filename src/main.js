@@ -72,15 +72,7 @@ async function loadImages() {
 	showLoader();
 
 	try {
-		const data = await getImagesByQuery({
-			key: "53631669-5f3764d338a9b02a712e297a2",
-			q: input.value,
-			image_type: "photo",
-			orientation: "horizontal",
-			safesearch: true,
-			per_page: 15
-		}, page);
-		
+		const data = await getImagesByQuery("https://pixabay.com/api", page);
 		handleDataPromise(data);
 	} catch (error) {
 		iziToast.error({

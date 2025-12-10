@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default async function getImagesByQuery(query, page) {
-	const response = await axios.get("https://pixabay.com/api", {
+	const response = await axios.get(query, {
 		params: {
 			key: query.key,
 			q: query.q,
