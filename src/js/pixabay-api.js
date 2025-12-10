@@ -3,12 +3,12 @@ import axios from "axios";
 export default async function getImagesByQuery(query, page) {
 	const response = await axios.get(query, {
 		params: {
-			key: query.key,
-			q: query.q,
-			image_type: query.image_type,
-			orientation: query.orientation,
-			safesearch: query.safesearch,
-			per_page: query.per_page,
+			key: "53631669-5f3764d338a9b02a712e297a2",
+			q: input.value,
+			image_type: "photo",
+			orientation: "horizontal",
+			safesearch: true,
+			per_page: 15,
 			page: page
 		}
 	});
