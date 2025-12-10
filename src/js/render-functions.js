@@ -3,6 +3,11 @@ import SimpleLightbox from "simplelightbox";
 // Додатковий імпорт стилів
 import "simplelightbox/dist/simple-lightbox.min.css";
 
+let lightboxGallery = new SimpleLightbox('.gallery a', {
+	captionsData: "alt",
+	captionDelay: 250
+});
+
 export function showLoader() {
 	const loader = document.querySelector(".loader");
 
@@ -51,11 +56,6 @@ export function createGallery(images) {
 	}).join("");
 
 	gallery.insertAdjacentHTML("beforeend", galleryImages);
-	
-	let lightboxGallery = new SimpleLightbox('.gallery a', {
-		captionsData: "alt",
-		captionDelay: 250
-	});
 
 	lightboxGallery.refresh();
 }
