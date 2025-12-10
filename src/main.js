@@ -72,7 +72,7 @@ async function loadImages() {
 	showLoader();
 
 	try {
-		const data = await getImagesByQuery("https://pixabay.com/api", page);
+		const data = await getImagesByQuery(`https://pixabay.com/api?q=${input.value}`, page);
 		handleDataPromise(data);
 	} catch (error) {
 		iziToast.error({
